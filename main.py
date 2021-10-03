@@ -43,6 +43,7 @@ def get_amazon_details():
     best_price = float(amazon_price[1:].replace(',', ''))
     url = amazon_url
 
+
 # to get product details from flipkart
 def get_flipkart_details():
     global best_price, best_website, url
@@ -50,7 +51,7 @@ def get_flipkart_details():
     driver.get(flipkart_url)
     driver.implicitly_wait(2)
     flipkart_name = driver.find_element_by_class_name("B_NuCI").text
-    flipkart_price = driver.find_element_by_xpath('//*[@id="container"]/div/div[3]/div[1]/div[2]/div[2]/div/div[4]/div[1]/div/div[1]').text
+    flipkart_price = driver.find_element_by_class_name("_25b18c").text
 
     worksheet['C2'] = flipkart_name
     worksheet['C3'] = flipkart_price
@@ -58,6 +59,7 @@ def get_flipkart_details():
         best_price = float(flipkart_price.text[1:])
         best_website = "Flipkart"
         url = flipkart_url
+
 
 # to get product details from paytmmall
 def get_paytmmall_details():
@@ -74,6 +76,7 @@ def get_paytmmall_details():
         best_price = float(paytmmall_price)
         best_website = "Paytmmall"
         url = amazon_url
+
 
 get_amazon_details()
 get_flipkart_details()
