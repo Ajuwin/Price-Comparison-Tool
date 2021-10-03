@@ -50,7 +50,7 @@ def get_flipkart_details():
     driver.get(flipkart_url)
     driver.implicitly_wait(2)
     flipkart_name = driver.find_element_by_class_name("B_NuCI").text
-    flipkart_price = driver.find_element_by_xpath('//*[@id="container"]/div/div[3]/div[1]/div[2]/div[2]/div/div[4]/div[1]/div/div[1]').text
+    flipkart_price = driver.find_element_by_class_name("_25b18c").text
 
     worksheet['C2'] = flipkart_name
     worksheet['C3'] = flipkart_price
