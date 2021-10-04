@@ -15,7 +15,8 @@ paytmmall_url = "https://paytmmall.com/apple-iphone-12-pro-max-256-gb-pacific-bl
 
 # best to buy from
 best_price = 0
-best_website = ''
+best_website = ""
+url = ""
 
 # open workbook
 work_book = Workbook()
