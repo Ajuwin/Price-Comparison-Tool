@@ -35,7 +35,7 @@ def get_amazon_details():
     driver.get(amazon_url)
     driver.implicitly_wait(2)
     amazon_name = driver.find_element_by_id("productTitle").text
-    amazon_price = driver.find_element_by_id("priceblock_ourprice").text
+    amazon_price = driver.find_element_by_id("priceblock_dealprice").text
     
     worksheet['B2'] = amazon_name
     worksheet['B3'] = amazon_price
